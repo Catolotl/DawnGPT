@@ -1,0 +1,158 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Chat Header (Title) */
+.chat-header {
+    background-color: transparent; /* No background color */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative; /* Ensures it stays at the top */
+    z-index: 10; /* Make sure header is above other elements if necessary */
+}
+
+
+/* Chat Header (Title) */
+.chat-header {
+    background-color: transparent; /* Transparent background */
+    color: #ffffff; /* White text for the header */
+    padding: 10px 20px;
+    text-align: left;
+    border-radius: 0px 0px 0 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Chat Box (Message Area) */
+.chat-box {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #222222; /* Slightly lighter dark background for message area */
+    display: flex;
+    flex-direction: column;
+}
+
+/* User Input Section */
+.user-input {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #444444; /* Dark border */
+    padding: 10px;
+    background-color: #333333; /* Dark background for input section */
+}
+
+.user-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #555555; /* Slightly lighter border */
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    background-color: #444444; /* Dark gray background for input */
+    color: #e0e0e0; /* Light text color */
+    outline: none;
+}
+
+/* Send Button */
+.user-input button {
+    background-color: #333333;  /* Dark button color */
+    color: #e0e0e0; /* Light text color for the button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-input button.enabled {
+    background-color: #333333;  /* Dark button when enabled */
+    color: #e0e0e0; /* White text when enabled */
+}
+
+.user-input button:hover {
+    background-color: #444444; /* Darker gray on hover */
+}
+
+.user-input button:disabled {
+    background-color: #555555; /* Disabled color */
+}
+
+/* Message Styling */
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+/* User Message */
+.message.user {
+    background-color: #444444;  /* Same background as input field */
+    color: #ffffff; /* White text for the user’s messages */
+    text-align: right;
+    margin-left: auto;
+}
+
+/* Bot Message */
+.message.bot {
+    background-color: transparent;  /* Transparent for bot messages */
+    color: #e0e0e0;  /* Light text color */
+    text-align: left;
+    margin-right: auto;
+    border: none; /* No border for bot messages */
+}
+
+/* Initial Message Text */
+#initial-message {
+    text-align: center;
+    color: #e0e0e0; /* Light gray text */
+    font-size: 24px; /* Larger text size */
+    margin-top: 20px;
+    font-weight: bold; /* Bold text instead of italic */
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Scroll behavior */
+.chat-box {
+    overflow-y: auto; /* Ensures chat area is scrollable */
+    scroll-behavior: smooth; /* Smooth scroll */
+}
+
+/* Ensure input field grows on width */
+.user-input input:focus {
+    outline: none;
+    border-color: #333333; /* Border color changes to dark gray on focus */
+}
+
+/* Styling for selection boxes, radio buttons, and checkboxes */
+select, input[type="checkbox"], input[type="radio"], textarea {
+    background-color: #444444; /* Dark gray background */
+    color: #e0e0e0; /* Light text color */
+    border: 1px solid #555555; /* Light gray border */
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+select:focus, input[type="checkbox"]:focus, input[type="radio"]:focus, textarea:focus {
+    border-color: #333333; /* Dark gray focus border */
+    outline: none;
+}
